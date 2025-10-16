@@ -30,7 +30,7 @@ project-root/
 2. **Edit `config/project.config.js`** (**REQUIRED** - library will not work without this):
    - Set your `defaultURL` and `defaultPreparedSearch` (lines 15-18)
    - Configure facet display names (lines 38-43)
-   - **Map your Solr field names** to result fields (lines 66-103)
+   - **Map your PreparedSearch field names** to result fields (lines 66-103)
    - Configure date field name if using date filter (line 56)
    - Enable/disable features as needed (lines 110-118)
 3. **Optional: Customize `custom/theme.css`** with brand colors
