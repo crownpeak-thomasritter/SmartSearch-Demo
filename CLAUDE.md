@@ -483,6 +483,15 @@ This is a vanilla JavaScript application:
 - No package managers
 - Just HTML + CSS + JS files
 
+**Running Locally:**
+Requires a web server (not file:// protocol):
+- Python: `python -m http.server 8000`
+- Node: `npx http-server -p 8000`
+- PHP: `php -S localhost:8000`
+- VS Code: Use "Live Server" extension
+
+Then open: http://localhost:8000
+
 ### State Management
 
 State is managed by:

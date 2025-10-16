@@ -34,9 +34,50 @@ project-root/
    - Configure date field name if using date filter (line 56)
    - Enable/disable features as needed (lines 110-118)
 3. **Optional: Customize `custom/theme.css`** with brand colors
-4. **Open `index.html`** in a browser
+4. **Run a local web server** (see below)
 
 **Note:** The library contains NO project-specific defaults. All URLs, index names, and field mappings MUST be provided in the config file or the library will throw an error.
+
+## 🌐 Running Locally
+
+This is a static HTML/CSS/JS application that needs to be served via HTTP (not opened directly as a file).
+
+### Quick Start - Choose One:
+
+**Python (if installed):**
+```bash
+# Python 3
+python -m http.server 8000
+
+# Python 2
+python -m SimpleHTTPServer 8000
+```
+
+**Node.js (if installed):**
+```bash
+# Using npx (no installation needed)
+npx http-server -p 8000
+
+# Or install globally
+npm install -g http-server
+http-server -p 8000
+```
+
+**PHP (if installed):**
+```bash
+php -S localhost:8000
+```
+
+**VS Code (recommended):**
+- Install "Live Server" extension
+- Right-click `index.html` → "Open with Live Server"
+
+Then open: **http://localhost:8000**
+
+### Why a web server is needed:
+- JavaScript module loading requires HTTP/HTTPS protocol
+- Prevents CORS issues when loading local files
+- Mimics production environment accurately
 
 ### Migrating from Old Structure
 
