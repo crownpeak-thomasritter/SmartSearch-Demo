@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>SmartSearch - VanillaJS Demo</title>
+
+    <!-- Meta -->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='lib/smartsearch-ui.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='custom/theme.css'>
+
+    <!-- Scripts -->
+    <script src='smartsearch.bundle.js'></script>
+    <script src='config/project.config.js'></script>
+    <script src='lib/smartsearch-ui.js'></script>
+    <script>
+        // Initialize SmartSearch with configuration
+        (function() {
+            // Check localStorage for custom settings
+            const haupiaURL = localStorage.getItem(SmartSearchConfig.server.localStorageKeys.server) ||
+                            SmartSearchConfig.server.defaultURL
+            const preparedSearch = localStorage.getItem(SmartSearchConfig.server.localStorageKeys.preparedSearch) ||
+                                 SmartSearchConfig.server.defaultPreparedSearch
+
+            // Create SmartSearch instance
+            const fsss = new SmartSearch(haupiaURL, preparedSearch, SmartSearchConfig.searchOptions)
+
+            // Create SmartSearchUI instance
+            window.smartSearchUI = new SmartSearchUI(fsss, SmartSearchConfig)
+
+            // Initialize on page load
+            window.addEventListener('load', () => {
+                window.smartSearchUI.initialize()
+            })
+        })()
+    </script>
+    <script src="https://kit.fontawesome.com/30dafb542f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Settings Button -->
+    <button id="settings-btn" class="settings-btn" aria-label="Settings" title="Settings">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-wrapper">
+                    <form action="/" onsubmit="submitSearchForm(event)" id="search-form">
+                        <div class="search-input-group">
+                            <input
+                                required
+                                type="search"
+                                name="query"
+                                id="search-bar"
+                                placeholder="Search for documents, articles, and more..."
+                                autocomplete="off"
+                                class="search-input">
+                            <button type="submit" class="search-button" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="did-you-mean" class="did-you-mean">
+                        <!-- Will contain the 'Did you mean' suggestions. -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <div class="content-grid">
+                <!-- Sidebar Filters -->
+                <aside class="sidebar">
+                    <div class="filters-container">
+                        <div class="filters-header">
+                            <h2 class="filters-title">Filters</h2>
+                            <button id="reset-all-facets-btn" class="reset-all-btn">
+                                Clear All
+                            </button>
+                        </div>
+
+                        <div id="facets-container" class="facets-wrapper">
+                            <!-- Facets will be rendered here -->
+                        </div>
+
+                        <div id="custom-date-filter" class="date-filter facet-group" style="display: none;">
+                            <div class="filter-group-title">
+                                <span>Date Range</span>
+                                <button id="reset-date-filter" class="facet-reset-btn">Reset</button>
+                            </div>
+                            <div class="date-inputs">
+                                <div class="date-input-group">
+                                    <label for="start-date" class="date-label">From</label>
+                                    <input type="date" id="start-date" class="date-input">
+                                </div>
+                                <div class="date-input-group">
+                                    <label for="end-date" class="date-label">To</label>
+                                    <input type="date" id="end-date" class="date-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Results Area -->
+                <section class="results-section">
+                    <div class="results-header">
+                        <div id="results-info" class="results-info">
+                            <!-- Result count will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div id="search-results" class="search-results">
+                        <!-- Will contain the search results. -->
+                    </div>
+
+                    <div id="pagination" class="pagination">
+                        <!-- Will contain pagination buttons. -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

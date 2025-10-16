@@ -1,0 +1,61 @@
+/**
+ * Project-Specific Theme Overrides
+ *
+ * This file contains brand-specific styling that overrides the default
+ * SmartSearch UI styles. Modify these values to match your brand.
+ *
+ * @see lib/smartsearch-ui.css for the base styles
+ */
+
+/* ===========================
+   Brand Color Overrides
+   =========================== */
+
+/*
+ * Uncomment and modify these CSS variables to customize your brand colors:
+ */
+
+/*
+:root {
+    /* Primary Brand Colors
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #dbeafe;
+
+    /* Accent Brand Colors
+    --accent-color: #8b5cf6;
+    --accent-light: #ede9fe;
+
+    /* Custom Font Family
+    font-family: 'Your-Brand-Font', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+*/
+
+/* ===========================
+   Custom Component Styling
+   =========================== */
+
+/*
+ * Add any custom component styles here.
+ * These will override the default library styles.
+ */
+
+/* Example: Custom logo styling
+.logo-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+*/
+
+/* Example: Custom result card styling
+.result-card {
+    /* Add custom shadows, borders, etc.
+}
+*/
+
+/* Example: Custom button styling
+.search-button {
+    /* Override default button appearance
+}
+*/
