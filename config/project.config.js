@@ -36,6 +36,39 @@ const SmartSearchConfig = {
     },
 
     // ========================================
+    // THEME CONFIGURATION
+    // ========================================
+    theme: {
+        // Enable theme switching
+        enabled: true,
+
+        // Default theme to load
+        default: localStorage.getItem('smartsearch-theme') || 'default',
+
+        // Available themes
+        available: [
+            {
+                id: 'default',
+                name: 'Default',
+                description: 'Professional light theme'
+            },
+            {
+                id: 'minimal',
+                name: 'Minimal Zen',
+                description: 'Japanese-inspired minimalist'
+            },
+            {
+                id: 'magazine',
+                name: 'Magazine',
+                description: 'Editorial with top filters & grid'
+            }
+        ],
+
+        // LocalStorage key for theme persistence
+        localStorageKey: 'smartsearch-theme'
+    },
+
+    // ========================================
     // SEARCH OPTIONS
     // ========================================
     searchOptions: {

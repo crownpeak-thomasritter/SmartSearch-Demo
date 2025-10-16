@@ -1,0 +1,483 @@
+/**
+ * Minimal Zen Theme Styles
+ *
+ * Japanese-inspired minimalist design with warm, natural palette
+ */
+
+/* ===========================
+   CSS Variables - Minimal Zen
+   =========================== */
+.theme-minimal {
+    /* Primary Colors - Sage Green */
+    --primary-color: #7a9b76;
+    --primary-hover: #658561;
+    --primary-light: #e8f0e7;
+    --primary-dark: #5a7356;
+
+    /* Accent Colors - Warm Earth */
+    --accent-color: #c9a66b;
+    --accent-light: #f5ede0;
+
+    /* Neutral Colors - Warm Monochrome */
+    --text-primary: #2d2d2d;
+    --text-secondary: #6b6b6b;
+    --text-tertiary: #a0a0a0;
+
+    /* Background Colors - Warm Cream */
+    --bg-primary: #fdfcfa;
+    --bg-secondary: #f7f5f2;
+    --bg-tertiary: #efebe6;
+    --bg-hover: #f0ede8;
+
+    /* Border Colors - Subtle */
+    --border-light: #e8e4df;
+    --border-medium: #d8d4cf;
+
+    /* Shadows - Soft and Natural */
+    --shadow-sm: 0 1px 3px rgba(45, 45, 45, 0.04);
+    --shadow-md: 0 2px 8px rgba(45, 45, 45, 0.06);
+    --shadow-lg: 0 4px 16px rgba(45, 45, 45, 0.08);
+    --shadow-xl: 0 8px 32px rgba(45, 45, 45, 0.1);
+
+    /* Spacing - Generous */
+    --spacing-xs: 0.375rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.25rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    /* Border Radius - Subtle */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+
+    /* Transitions - Smooth */
+    --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===========================
+   Body & Typography
+   =========================== */
+.theme-minimal body {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.theme-minimal strong,
+.theme-minimal b {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+/* ===========================
+   Settings Button
+   =========================== */
+.theme-minimal .settings-btn {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+}
+
+.theme-minimal .settings-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.theme-minimal .settings-btn i {
+    color: var(--text-secondary);
+}
+
+.theme-minimal .settings-btn:hover i {
+    color: white;
+}
+
+/* ===========================
+   Search Section
+   =========================== */
+.theme-minimal .search-input-group {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.theme-minimal .search-input-group:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--primary-light), var(--shadow-md);
+}
+
+.theme-minimal .search-input {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.theme-minimal .search-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.theme-minimal .search-button {
+    background: var(--primary-color);
+    color: white;
+}
+
+.theme-minimal .search-button:hover {
+    background: var(--primary-hover);
+    box-shadow: var(--shadow-md);
+}
+
+/* Did You Mean */
+.theme-minimal .did-you-mean {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+.theme-minimal .did-you-mean span {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.theme-minimal .did-you-mean span:hover {
+    color: var(--primary-hover);
+}
+
+/* ===========================
+   Sidebar & Filters
+   =========================== */
+.theme-minimal .filters-container {
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    padding: var(--spacing-xl);
+}
+
+.theme-minimal .filters-header {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.theme-minimal .filters-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.theme-minimal .reset-all-btn {
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--border-light);
+}
+
+.theme-minimal .reset-all-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* ===========================
+   Minimal Zen Facets - Tag Style
+   =========================== */
+.theme-minimal .minimal-facet {
+    margin-bottom: var(--spacing-xl);
+}
+
+.theme-minimal .minimal-facet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.theme-minimal .minimal-facet-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.theme-minimal .minimal-facet-clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.theme-minimal .minimal-facet-clear:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.theme-minimal .minimal-facet-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.theme-minimal .minimal-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.875rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.theme-minimal .minimal-tag:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--border-medium);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+.theme-minimal .minimal-tag-active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.theme-minimal .minimal-tag-active:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.theme-minimal .minimal-tag-label {
+    font-weight: 500;
+}
+
+.theme-minimal .minimal-tag-count {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+/* Date Filter */
+.theme-minimal .date-filter {
+    border-top: 1px solid var(--border-light);
+    padding-top: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.theme-minimal .date-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.8125rem;
+}
+
+.theme-minimal .date-input {
+    border: 1px solid var(--border-light);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.theme-minimal .date-input:focus {
+    border-color: var(--primary-color);
+    background: var(--bg-primary);
+    outline: none;
+}
+
+/* ===========================
+   Results Section
+   =========================== */
+.theme-minimal .results-info {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.theme-minimal .results-info strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ===========================
+   Minimal Zen Result Cards
+   =========================== */
+.theme-minimal .result-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.theme-minimal .result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.theme-minimal .minimal-result {
+    padding: var(--spacing-xl);
+}
+
+.theme-minimal .minimal-result-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.theme-minimal .minimal-result-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.theme-minimal .minimal-date {
+    font-weight: 500;
+}
+
+.theme-minimal .minimal-separator {
+    opacity: 0.5;
+}
+
+.theme-minimal .minimal-language {
+    font-weight: 500;
+}
+
+.theme-minimal .minimal-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: -0.02em;
+    transition: color var(--transition-fast);
+}
+
+.theme-minimal .result-card:hover .minimal-title {
+    color: var(--primary-color);
+}
+
+.theme-minimal .minimal-description {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.theme-minimal .minimal-description strong {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.theme-minimal .minimal-link-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-top: var(--spacing-sm);
+    transition: all var(--transition-fast);
+}
+
+.theme-minimal .minimal-link-text {
+    letter-spacing: 0.02em;
+}
+
+.theme-minimal .minimal-arrow {
+    transition: transform var(--transition-fast);
+}
+
+.theme-minimal .result-card:hover .minimal-arrow {
+    transform: translateX(4px);
+}
+
+/* ===========================
+   Pagination
+   =========================== */
+.theme-minimal .smart-search-pagination button,
+.theme-minimal .smart-search-pagination li {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+}
+
+.theme-minimal .smart-search-pagination button:hover,
+.theme-minimal .smart-search-pagination li:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.theme-minimal .smart-search-pagination .smart-search-pagination-current,
+.theme-minimal .smart-search-pagination-current {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* ===========================
+   Autocomplete Widget
+   =========================== */
+.theme-minimal .smart-search-autocomplete-widget {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-xl);
+}
+
+.theme-minimal .smart-search-autocomplete-widget div {
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.theme-minimal .smart-search-autocomplete-widget div:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.theme-minimal .smart-search-autocomplete-active {
+    background: var(--primary-light) !important;
+    color: var(--primary-color) !important;
+}
+
+/* ===========================
+   Loading & Empty States
+   =========================== */
+.theme-minimal .loading-spinner {
+    color: var(--primary-color);
+}
+
+.theme-minimal .empty-state {
+    color: var(--text-secondary);
+}
+
+.theme-minimal .empty-state-text {
+    color: var(--text-primary);
+}

@@ -1,0 +1,414 @@
+/**
+ * Default Theme Styles
+ *
+ * Professional light theme with modern design
+ * Extracted from original lib/smartsearch-ui.css
+ */
+
+/* ===========================
+   CSS Variables
+   =========================== */
+:root {
+    /* Primary Colors */
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #dbeafe;
+
+    /* Accent Colors */
+    --accent-color: #8b5cf6;
+    --accent-light: #ede9fe;
+
+    /* Neutral Colors */
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-tertiary: #9ca3af;
+
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --bg-hover: #f9fafb;
+
+    /* Border Colors */
+    --border-light: #e5e7eb;
+    --border-medium: #d1d5db;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 200ms ease-in-out;
+    --transition-slow: 300ms ease-in-out;
+}
+
+/* ===========================
+   Body & Typography
+   =========================== */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    line-height: 1.6;
+}
+
+strong, b {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* ===========================
+   Settings Button
+   =========================== */
+.settings-btn {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+}
+
+.settings-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.settings-btn i {
+    color: var(--text-secondary);
+}
+
+.settings-btn:hover i {
+    color: white;
+}
+
+/* ===========================
+   Header
+   =========================== */
+.header {
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.logo a {
+    color: var(--text-primary);
+}
+
+.logo a:hover {
+    color: var(--primary-color);
+}
+
+.logo-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===========================
+   Search Section
+   =========================== */
+.search-input-group {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+}
+
+.search-input-group:focus-within {
+    border-color: var(--border-light);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25), var(--shadow-lg);
+}
+
+.search-input {
+    color: var(--text-primary);
+}
+
+.search-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.search-button {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+.search-button:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Did You Mean */
+.did-you-mean {
+    color: var(--text-secondary);
+}
+
+.did-you-mean span {
+    color: var(--primary-color);
+}
+
+.did-you-mean span:hover {
+    color: var(--primary-hover);
+}
+
+/* ===========================
+   Sidebar & Filters
+   =========================== */
+.filters-container {
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+}
+
+.filters-header {
+    border-bottom: 2px solid var(--border-light);
+}
+
+.filters-title {
+    color: var(--text-primary);
+}
+
+.reset-all-btn {
+    color: var(--primary-color);
+}
+
+.reset-all-btn:hover {
+    background: var(--primary-light);
+}
+
+/* Facet Groups */
+.filter-group-title {
+    color: var(--text-primary);
+}
+
+.facet-reset-btn {
+    color: var(--text-secondary);
+}
+
+.facet-reset-btn:hover {
+    color: var(--primary-color);
+    background: var(--bg-tertiary);
+}
+
+.facet-option:hover {
+    background: var(--bg-hover);
+}
+
+.facet-option input[type="checkbox"] {
+    accent-color: var(--primary-color);
+}
+
+.facet-option label {
+    color: var(--text-secondary);
+}
+
+.facet-count {
+    color: var(--text-tertiary);
+}
+
+/* Date Filter */
+.date-filter {
+    border-top: 1px solid var(--border-light);
+}
+
+.date-label {
+    color: var(--text-secondary);
+}
+
+.date-input {
+    border: 1px solid var(--border-medium);
+}
+
+.date-input:focus {
+    border-color: var(--primary-color);
+}
+
+/* ===========================
+   Results Section
+   =========================== */
+.results-info {
+    color: var(--text-secondary);
+}
+
+/* ===========================
+   Result Cards
+   =========================== */
+.result-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.result-card:hover {
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.12),
+                0 4px 8px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.result-title {
+    color: var(--text-primary);
+}
+
+.result-card:hover .result-title {
+    color: var(--primary-color);
+}
+
+.result-title strong,
+.result-description strong {
+    color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.result-description {
+    color: var(--text-secondary);
+}
+
+.result-footer {
+    border-top: 1px solid var(--border-light);
+}
+
+.result-date {
+    color: var(--text-tertiary);
+}
+
+.result-badge {
+    background: var(--primary-color);
+    color: white;
+}
+
+.result-url {
+    color: var(--text-tertiary);
+}
+
+/* Menu Button */
+.result-menu-btn {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.result-menu-btn:hover {
+    background: var(--bg-primary);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.result-menu-btn svg {
+    color: var(--text-secondary);
+}
+
+.result-menu-btn:hover svg {
+    color: var(--primary-color);
+}
+
+/* Menu Dropdown */
+.result-menu-dropdown {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+}
+
+.result-menu-header {
+    border-bottom: 1px solid var(--border-light);
+    background: var(--bg-secondary);
+}
+
+.result-menu-header h3 {
+    color: var(--text-primary);
+}
+
+.result-menu-close {
+    color: var(--text-secondary);
+}
+
+.result-menu-close:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.field-item {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.field-label {
+    color: var(--text-secondary);
+}
+
+.field-value {
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    border-left: 2px solid var(--primary-color);
+}
+
+/* ===========================
+   Pagination
+   =========================== */
+.smart-search-pagination button,
+.smart-search-pagination li {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+}
+
+.smart-search-pagination button:hover,
+.smart-search-pagination li:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.smart-search-pagination .smart-search-pagination-current,
+.smart-search-pagination-current {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* ===========================
+   Autocomplete Widget
+   =========================== */
+.smart-search-autocomplete-widget {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-xl);
+}
+
+.smart-search-autocomplete-widget div {
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.smart-search-autocomplete-widget div:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.smart-search-autocomplete-active {
+    background: var(--primary-light) !important;
+    color: var(--primary-color) !important;
+}
+
+/* ===========================
+   Loading & Empty States
+   =========================== */
+.loading-spinner {
+    color: var(--text-tertiary);
+}
+
+.empty-state {
+    color: var(--text-secondary);
+}
