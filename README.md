@@ -79,14 +79,6 @@ Then open: **http://localhost:8000**
 - Prevents CORS issues when loading local files
 - Mimics production environment accurately
 
-### Migrating from Old Structure
-
-If you have an older version with monolithic `search.js` and `main.css` files:
-
-1. Old `search.js` → `lib/smartsearch-ui.js` (generic logic) + `config/project.config.js` (your settings)
-2. Old `main.css` → `lib/smartsearch-ui.css` (base styles) + `custom/theme.css` (your brand colors)
-3. Inline configuration in `index.html` → `config/project.config.js`
-
 ## 📝 Configuration Guide
 
 All project-specific settings live in **`config/project.config.js`**. Here's what you can configure:
@@ -305,9 +297,23 @@ When improving the library:
 - Added configuration validation to ensure library remains 100% generic
 - All project-specific code now lives in single config file
 
-## 📄 License
+## 📄 License & Disclaimer
 
-This is a demo application for SmartSearch.js by Crownpeak/FirstSpirit.
+**Private Test Project** - This is a personal/experimental project by Thomas Ritter.
+
+**✅ Free to Use:**
+- **Free for anyone to use, modify, and distribute**
+- **No restrictions** - do whatever you want with this code
+- **No attribution required**
+
+**⚠️ Important:**
+- **NOT an official Crownpeak product or reference implementation**
+- **NO official support provided**
+- **NO warranty or guarantees**
+- Provided "as-is" for educational and testing purposes
+- Use at your own risk
+
+This project demonstrates SmartSearch.js integration but is not endorsed by or affiliated with Crownpeak/FirstSpirit as an official example.
 
 ---
 
