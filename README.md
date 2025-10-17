@@ -2,7 +2,9 @@
 
 ## 🎬 Demo Showcase
 
-https://github.com/crownpeak-thomasritter/SmartSearch-Demo/raw/main/public/intro.mp4
+> **📹 [▶️ Watch the Demo Video](https://github.com/crownpeak-thomasritter/SmartSearch-Demo/raw/main/public/intro.mp4)**
+>
+> See the SmartSearch demo in action, featuring theme switching (Default, Minimal Zen, Magazine), collapsible filters, and responsive search functionality.
 
 ---
 
