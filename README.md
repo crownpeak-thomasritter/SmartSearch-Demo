@@ -1,5 +1,13 @@
 # SmartSearch Vanilla JS Demo - Modular Version
 
+## 🎬 Demo Showcase
+
+https://github.com/user-attachments/assets/intro.mp4
+
+<video src="public/intro.mp4" controls style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></video>
+
+---
+
 A modular, reusable SmartSearch interface with clear separation between generic library code and project-specific customizations.
 
 ## 📁 Project Structure
