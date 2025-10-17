@@ -2,9 +2,7 @@
 
 ## 🎬 Demo Showcase
 
-https://github.com/user-attachments/assets/intro.mp4
-
-<video src="public/intro.mp4" controls style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></video>
+https://github.com/crownpeak-thomasritter/SmartSearch-Demo/raw/main/public/intro.mp4
 
 ---
 
