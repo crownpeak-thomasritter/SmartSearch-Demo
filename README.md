@@ -1,10 +1,9 @@
 # SmartSearch Vanilla JS Demo - Modular Version
 
 ## 🎬 Demo Showcase
+https://github.com/user-attachments/assets/9a1d7a04-d1a3-4cd4-a068-a18b772a87aa
 
-<video src="public/intro.mp4" controls width="100%" autoplay muted loop>
-  Your browser does not support the video tag.
-</video>
+
 
 _See the SmartSearch demo in action, featuring theme switching (Default, Minimal Zen, Magazine), collapsible filters, and responsive search functionality._
 
