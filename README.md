@@ -2,7 +2,9 @@
 
 ## 🎬 Demo Showcase
 
-https://github.com/crownpeak-thomasritter/SmartSearch-Demo/assets/176070256/intro.webm
+<video src="https://github.com/crownpeak-thomasritter/SmartSearch-Demo/assets/176070256/intro.webm" controls width="100%" autoplay muted loop>
+  Your browser does not support the video tag.
+</video>
 
 _See the SmartSearch demo in action, featuring theme switching (Default, Minimal Zen, Magazine), collapsible filters, and responsive search functionality._
 
