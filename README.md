@@ -2,7 +2,7 @@
 
 ## 🎬 Demo Showcase
 
-<video src="https://github.com/crownpeak-thomasritter/SmartSearch-Demo/assets/176070256/intro.webm" controls width="100%" autoplay muted loop>
+<video src="public/intro.mp4" controls width="100%" autoplay muted loop>
   Your browser does not support the video tag.
 </video>
 
