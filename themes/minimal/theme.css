@@ -302,6 +302,35 @@
     outline: none;
 }
 
+/* Date Preset Buttons */
+.theme-minimal .date-presets {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: var(--spacing-md);
+}
+
+.theme-minimal .preset-btn {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+}
+
+.theme-minimal .preset-btn:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--border-medium);
+}
+
+.theme-minimal .preset-btn.active {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+.theme-minimal .preset-btn.active:hover {
+    background: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+}
+
 /* ===========================
    Results Section
    =========================== */

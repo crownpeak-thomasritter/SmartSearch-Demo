@@ -103,7 +103,20 @@ const SmartSearchConfig = {
         fieldName: 'meta_date',
 
         // Solr filter query parameter name
-        solrFilterParam: 'fq'
+        solrFilterParam: 'fq',
+
+        // NEW: Preset date range options
+        presets: {
+            enabled: true,
+            options: [
+                { label: 'Last 3 Days', days: 3 },
+                { label: 'Last Week', days: 7 },
+                { label: 'Last Month', days: 30 },
+                { label: 'Last 3 Months', days: 90 },
+                { label: 'Last 6 Months', days: 180 },
+                { label: 'Last Year', days: 365 }
+            ]
+        }
     },
 
     // ========================================

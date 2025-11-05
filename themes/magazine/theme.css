@@ -389,6 +389,39 @@
     box-shadow: 0 0 0 3px var(--primary-light);
 }
 
+/* Date Preset Buttons */
+.magazine-filter-bar .date-presets,
+.theme-magazine .date-presets {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: var(--spacing-md);
+}
+
+.theme-magazine .preset-btn {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-medium);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.theme-magazine .preset-btn:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.theme-magazine .preset-btn.active {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.theme-magazine .preset-btn.active:hover {
+    background: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+}
+
 /* ===========================
    Results Section
    =========================== */
