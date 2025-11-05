@@ -1,5 +1,29 @@
 # SmartSearch Vanilla JS Demo - Modular Version
 
+---
+
+## ⚠️ **IMPORTANT DISCLAIMER** ⚠️
+
+> ### 🔴 **NOT AN OFFICIAL CROWNPEAK PRODUCT**
+>
+> **This is a PRIVATE TEST PROJECT by Thomas Ritter**
+>
+> ### ✅ **Free to Use:**
+> - ✅ **Free for anyone** to use, modify, and distribute
+> - ✅ **No restrictions** - do whatever you want with this code
+> - ✅ **No attribution required**
+>
+> ### ⚠️ **Critical Warnings:**
+> - ❌ **NOT an official Crownpeak product or reference implementation**
+> - ❌ **NO official support provided**
+> - ❌ **NO warranty or guarantees of any kind**
+> - ❌ **Provided "as-is"** for educational and testing purposes only
+> - ⚠️ **Use at your own risk**
+>
+> **This project demonstrates SmartSearch.js integration but is NOT endorsed by or affiliated with Crownpeak/FirstSpirit as an official example.**
+
+---
+
 ## 🎬 Demo Showcase
 https://github.com/user-attachments/assets/9a1d7a04-d1a3-4cd4-a068-a18b772a87aa
 
@@ -306,24 +330,6 @@ When improving the library:
 - Added configuration validation to ensure library remains 100% generic
 - All project-specific code now lives in single config file
 
-## 📄 License & Disclaimer
-
-**Private Test Project** - This is a personal/experimental project by Thomas Ritter.
-
-**✅ Free to Use:**
-- **Free for anyone to use, modify, and distribute**
-- **No restrictions** - do whatever you want with this code
-- **No attribution required**
-
-**⚠️ Important:**
-- **NOT an official Crownpeak product or reference implementation**
-- **NO official support provided**
-- **NO warranty or guarantees**
-- Provided "as-is" for educational and testing purposes
-- Use at your own risk
-
-This project demonstrates SmartSearch.js integration but is not endorsed by or affiliated with Crownpeak/FirstSpirit as an official example.
-
 ---
 
-**Questions?** Check CLAUDE.md for architecture details or examine the configuration file comments.
+For architecture details, see **CLAUDE.md** or examine the configuration file comments.
